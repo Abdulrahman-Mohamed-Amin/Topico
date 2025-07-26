@@ -1,0 +1,42 @@
+<app-header></app-header>
+<app-nav [login]="false"></app-nav>
+
+<div class="login container d-flex justify-content-center align-items-center">
+  <div class="bg-white shadow-sm cont">
+    <h2 class="text-center mb-3 fw-bold">welcome back</h2>
+
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Email"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Password"
+      />
+     
+    </div>
+    <p class="forget text-end">forget password?</p>
+      <button class="login_btn">Login</button>
+      <div class="sign_in d-flex gap-2 mt-3">
+        <p>dont have an account?</p>
+        <a routerLink="/login" class="">sign in</a>
+      </div>
+      <div class="btns">
+        <button class="apple">
+          <i class="fab fa-apple"></i> login With apple
+        </button>
+        <button class="google">
+          <i class="fab fa-google"></i> login With google
+        </button>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import 'swiper/swiper-bundle.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+     font-family: "Rubik", sans-serif;
+     transition: 0.3s;
+}
+
+:root{
+    --main-color: #fcb700;
+    --dark:#222222;
+    --parg:#666666;
+    --dark-red:#d01418;
+    --border:#6666662a;
+    --name:#0066c0;
+}
+body{
+    background: #f5f6f9;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--dark);
+}
+p{
+    color: var(--parg);
+}
+.my_btn{
+    border: none;
+    background: var(--main-color);
+    padding: 5px 10px;
+}
+
+.icon_circle{
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.icon_circle:hover{
+    background: var(--main-color);
+    cursor: pointer;
+    
+}
+.new{
+    color: var(--main-color);
+
+}
+.old{
+    text-decoration: line-through;
+    color: var(--parg);
+    font-weight: normal;
+    font-size: 13px;
+}
+.title{
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--border);
+    padding-bottom: 15px;
+}
+.title span{
+    color: var(--parg);
+}
+.title::before{
+    position: absolute;
+    content: '';
+    width: 130px;
+    height: 3px;
+    background: var(--main-color);
+    bottom: -3px;
+    left: 0;
+}
+@media(max-width:500px){
+    .title{
+        font-size: 16px;
+    }
+}
+
+
+.box:hover .shine{
+    transform:  rotate(180deg) translateX(-500px);
+}
+.shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transition: 0.5s;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(180deg) translateX(500px);
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 8px; /* عرض الشريط العمودي */
+  height: 8px; /* الشريط الأفقي لو موجود */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);      
+  border-radius: 10px;   
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;   /* لون الخلفية */
+}

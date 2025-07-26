@@ -1,0 +1,215 @@
+<app-header></app-header>
+<app-nav></app-nav>
+
+<div class="container  mb-5">
+  <div class="text">
+    <h1>experincse the feture of technologywith our topico</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim quam
+      placeat ullam esse harum rerum? Eveniet itaque nihil voluptates!
+      Molestiae.
+    </p>
+  </div>
+  <div class="cont">
+    <button class="filter_btn d-lg-none d-block" (click)="open()">
+      filter <i class="fas fa-filter"></i>
+    </button>
+
+    <div class="row">
+      <div class="col-3 d-lg-block d-none">
+        <div class="filter bg-white shadow-sm">
+          <h4>fillter</h4>
+          <ul>
+            <h6>categoties</h6>
+            <li>
+              <p>phones</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>watches</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>tv</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>elctronic</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>taplet</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>fashon</p>
+              <input type="checkbox" />
+            </li>
+          </ul>
+
+          <ul>
+            <h6>brands</h6>
+            <li>
+              <p>iphon</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>samsung</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>reelme</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>oppo</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>toshipa</p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p>LG</p>
+              <input type="checkbox" />
+            </li>
+          </ul>
+          <ul class="color">
+            <h6>color</h6>
+            <li>
+              <p style="background-color: black"></p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p style="background-color: red"></p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p style="background-color: gray"></p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p style="background-color: var(--name)"></p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p style="background-color: yellow"></p>
+              <input type="checkbox" />
+            </li>
+            <li>
+              <p style="background-color: #ccc"></p>
+              <input type="checkbox" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-12">
+        <div class="products">
+          <div class="row gy-3">
+            @for (product of products; track $index) {
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+              <app-card
+                [product]="product"
+                [sale]="true"
+                (addToCart)="handleAddToCart(product)"
+              ></app-card>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="filter bg-white shadow-sm heddin_filter"
+  [ngClass]="{'show': show_filter}"
+>
+  <i class="far fa-circle-xmark position-absolute" (click)="close()"></i>
+  <h4>fillter</h4>
+  <ul>
+    <h6>categoties</h6>
+    <li>
+      <p>phones</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>watches</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>tv</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>elctronic</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>taplet</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>fashon</p>
+      <input type="checkbox" />
+    </li>
+  </ul>
+
+  <ul>
+    <h6>brands</h6>
+    <li>
+      <p>iphon</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>samsung</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>reelme</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>oppo</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>toshipa</p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p>LG</p>
+      <input type="checkbox" />
+    </li>
+  </ul>
+  <ul class="color">
+    <h6>color</h6>
+    <li>
+      <p style="background-color: black"></p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p style="background-color: red"></p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p style="background-color: gray"></p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p style="background-color: var(--name)"></p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p style="background-color: yellow"></p>
+      <input type="checkbox" />
+    </li>
+    <li>
+      <p style="background-color: #ccc"></p>
+      <input type="checkbox" />
+    </li>
+  </ul>
+</div>
+
+<app-footer></app-footer>

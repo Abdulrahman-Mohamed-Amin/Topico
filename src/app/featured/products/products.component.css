@@ -1,0 +1,105 @@
+*{
+    text-transform: capitalize;
+}
+.text{
+    text-align: center;
+    margin: 50px 0;
+}
+.text h1{
+    color: var(--main-color);
+}
+.text p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    margin-top: 20px;
+}
+@media(max-width:991px){
+    .text h1{
+        font-size: 25px;
+    }
+    .text p{
+        font-size: 15px;
+        width: 80%;
+    }
+}
+@media(max-width:500px){
+    .text h1{
+        font-size: 20px;
+    }
+    .text p{
+        font-size: 13px;
+        width: 90%;
+    }
+}
+.filter_btn{
+    margin-bottom: 20px;
+    background: var(--main-color);
+    border: none;
+    padding: 6px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.filter{
+    padding: 15px;
+    border: 1px solid var(--border);
+}
+.filter ul{
+    margin: 15px 0 ;
+    padding: 0;
+    list-style: none;
+
+}
+.filter h4{
+    margin-bottom: 30px;
+    font-size: 27px;
+}
+.filter h6{
+    font-size: 18px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.filter li{
+    display: flex;
+    justify-content: space-between;
+}
+.filter li input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.filter .color p{
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+}
+.heddin_filter{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 100;
+    overflow: scroll;
+    transform: translateX(-100%);
+}
+.heddin_filter.show{
+    transform: translateX(0);
+}
+.heddin_filter i{
+    top: 15px;
+    right: 15px;
+    transition: 0.3s;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.heddin_filter i:hover{
+    color: var(--dark-red);
+}
+@media(max-width:400px){
+    .heddin_filter{
+        width: 100%;
+    }
+}

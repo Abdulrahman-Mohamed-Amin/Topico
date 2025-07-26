@@ -1,0 +1,46 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<div class="container">
+    <app-section1></app-section1>
+    <app-section2></app-section2>
+    <app-slider 
+    [showPhoto]="false" 
+    [title]="'On Sale'" 
+    [titleSpan]="'products'" 
+    [slidesPerPage]="[2,3,4,5]"
+    [filterByOldPrice]="true"
+    [saleCase]="true"
+    [sliderName]="'swiper1'"
+    ></app-slider>
+
+    <app-banner2></app-banner2>
+
+    <app-slider 
+    [showPhoto]="true"
+    [title]="'Computer & Desktop'"
+    [titleSpan]="'Products'"
+    [slidesPerPage]="[2,2,3,4]"
+    [filterByOldPrice]="false"
+    [saleCase]="false"
+    [photoType]="'banner-sm-1.jpg'"
+    [sliderName]="'swiper2'"
+    [order]="'0'"
+    ></app-slider>
+
+    <app-slider 
+    [showPhoto]="true"
+    [title]="'Mobil & digitl'"
+    [titleSpan]="'Products'"
+    [slidesPerPage]="[2,2,3,4]"
+    [filterByOldPrice]="false"
+    [saleCase]="false"
+    [photoType]="'banner-sm-2.jpg'"
+    [sliderName]="'swiper3'"
+    [order]="'1'"
+    ></app-slider>
+
+    <app-banner3></app-banner3>
+
+</div>
+<app-suscribe></app-suscribe>
+<app-footer></app-footer>

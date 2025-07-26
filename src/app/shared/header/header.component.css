@@ -1,0 +1,183 @@
+*{
+    /* margin: 0; */
+}
+img{
+    width: 150px;
+    cursor: pointer;
+}
+.search{
+    border: 1px solid var(--main-color);
+    width: 500px;
+    position: relative;
+}
+.search input{
+    border: none;
+    padding:18px 175px 18px 20px ;
+}
+.search input:focus{
+    outline: none;
+}
+.search input::placeholder{
+    /* font-size: 12px; */
+    padding: 8px;
+}
+.search button{
+    background: var(--main-color);
+    border: none;
+    padding: 18px;
+    width: 175px;
+    position: absolute;
+    right: 0;top: 0;
+
+
+}
+
+.cart .icon_cart{
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+}
+.cart .icon_cart span{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: var(--main-color);
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+.cart .icon_cart:hover{
+    background: var(--main-color);
+    cursor: pointer;
+    
+}
+.icon_cart i{
+    transition: 0.3s;
+}
+.icon_cart:hover i{
+    color: #fff;
+}
+.cart p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.hidden_cart{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    z-index: 100;
+}
+.close{
+    transform: translateX(100%);
+
+}
+@media(max-width:450px){
+    .hidden_cart{
+        width: 100%;
+    }
+}
+
+/* hidden cart */
+
+.hidden_cart .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.top div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.top div h4{
+    font-size: 20px;
+    margin: 0;
+}
+.top div p{
+    font-size: 14px;
+    margin: 0;
+}
+.top i{
+    font-size: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.top i:hover{
+    color: var(--main-color);
+}
+.middle{
+    border-block:1px solid var(--border);
+    padding: 15px 0;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.middle img{
+    width: 70px;
+}
+.middle .text{
+    padding: 0 10px;
+}
+.text h6{
+    margin: 0;
+}
+.text p{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.middle i{
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.middle i:hover{
+    color: var(--dark-red);
+}
+.down{
+    padding: 10px 0;
+}
+.down .sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sub span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+.down .btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.down button{
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+.down button:first-child{
+    background: var(--main-color);
+}
+.down button:first-child:hover{
+    background: none;
+}
+.down button:last-child{
+    background: none;
+}
+.down button:last-child:hover{
+    background: var(--main-color);
+}

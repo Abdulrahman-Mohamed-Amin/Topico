@@ -1,0 +1,9 @@
+img{
+    width: 100%;
+}
+.box{
+    overflow: hidden;
+}
+.row{
+    margin-top: 80px;
+}

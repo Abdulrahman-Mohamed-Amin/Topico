@@ -1,0 +1,32 @@
+
+<div class="product bg-white shadow-sm" [routerLink]="['/product-detils' , product.id]" >
+    @if (sale && product.old_price) {
+        <div class="sale position-absolute">%{{(((product.old_price - product.price) / product.old_price) * 100).toFixed()}}</div>
+    }
+    <div class="icons position-absolute">
+        <i class="fas fa-cart-plus" (click)="onAddToCart($event);"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-share"></i>
+    </div>
+    <div class="img_cont">
+        <img src="assets/{{product.img}}" alt="">
+        <img src="assets/{{product.img_hover}}" alt="" class="img_hover">
+    </div>
+    <h3 class="product_name">
+        <a href="">{{product.name}}</a>
+    </h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+
+    <div class="price">
+        <p class="new">${{product.price}}</p>
+        @if (sale && product.old_price) {
+            <p class="old">${{product.old_price}}</p>
+        }
+    </div>
+</div>

@@ -1,0 +1,90 @@
+.product_detils{
+    padding: 50px 0;
+}
+.product_detils .big{
+    width: 100%;
+}
+.product_detils .img_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.product_detils .img_cont img{
+    width: 100px;
+    cursor: pointer;
+}
+.product_detils .text{
+    padding-top: 40px;
+    padding-right: 30px;
+}
+.text .name{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.stras i{
+    color: var(--main-color);
+    font-size: 18px;
+    margin: 0 3px;
+}
+.prices{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.old{
+    font-weight: bold;
+    font-size: 18px;
+}
+.ava{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.ava span{
+    color: var(--main-color);
+}
+.text > p{
+    font-size: 17px;
+}
+.text button{
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: 0.3s;
+    font-size: 18px;
+    padding: 7px 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+.text button:hover{
+    background: #fff;
+}
+.text .icons{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.icons i{
+        border-radius: 50%;
+    background: #f5f6f9;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.icons i:hover{
+    background: var(--main-color);
+}
+@media(max-width:578px){
+    .text .name{
+        font-size: 18px;
+    }
+     .text > p{
+        font-size: 14px;
+     }
+}

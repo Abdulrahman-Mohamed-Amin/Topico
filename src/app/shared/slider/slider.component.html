@@ -1,0 +1,26 @@
+<h3 class="title">
+  {{ title }} <span>{{ titleSpan }}</span>
+</h3>
+
+<div class="slider mb-5 position-relative">
+  @if (showPhoto) {
+  <div class="img_cont d-md-block d-none" [ngStyle]="{'order': order}">
+    <img src="assets/img/banner/{{photoType}}" alt="" />
+  </div>
+  }
+
+  <div class="swiper-container-wrapper" [ngClass]="{'swiper-full-width': !showPhoto , 'swiper-width':showPhoto}">
+    <div class="swiper-container {{sliderName}}">
+      <div class="swiper-wrapper">
+        @for (product of filteredProducts; track $index) {
+        <div class="swiper-slide">
+          <app-card [sale]="saleCase" [product]="product" (addToCart)="handleAddToCart(product)"> </app-card>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>

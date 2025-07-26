@@ -1,0 +1,67 @@
+.login{
+    margin: 50px 0;
+    text-transform: capitalize;
+}
+.cont{
+    padding: 15px;
+    border-radius: 5px;
+    width: 400px;
+    border: 1px solid var(--border);
+}
+@media(max-width:500px){
+    .cont{
+        width: 100%;
+    }
+}
+.forget{
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+.forget:hover{
+    text-decoration: underline;
+}
+.login_btn{
+    width: 100%;
+    background: var(--main-color);
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+.sign_in a{
+    color: var(--main-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.sign_in a:hover{
+    text-decoration: underline;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.btns button{
+    padding: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex; gap: 10px;
+    justify-content: center;
+}
+.apple{
+    background: #000;
+    border: 2px solid #000;
+    color: #fff;
+}
+.google{
+    background: #F0F0F0;
+    border: 2px solid #000;
+}
+.btns button i{
+    font-size: 25px;
+    /* margin-right: 10px; */
+}

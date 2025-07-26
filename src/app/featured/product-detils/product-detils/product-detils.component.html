@@ -1,0 +1,59 @@
+<app-header></app-header>
+<app-nav></app-nav>
+
+<div class="product_detils bg-white">
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-lg-5 col-12">
+        <div class="imgs">
+          <img src="assets/{{product?.img}}" alt="" class="big" />
+          <div class="img_cont">
+            <img src="assets/{{product?.img}}" alt="" class="big" />
+            <img src="assets/{{product?.img_hover}}" alt="" class="big" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 col-12">
+        <div class="text text-center text-lg-start">
+            <h3 class="name">{{product?.name}}</h3>
+            <div class="stras">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="prices justify-content-lg-start justify-content-center">
+                <p class="new">${{product?.price}}</p>
+                <p class="old">${{product?.old_price}}</p>
+            </div>
+            <h6 class="ava">Avaliablty : <span>In Stock</span></h6>
+            <h6 class="ava">SKU :<span>Very Good Devise From Japan</span></h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt in, omnis earum nesciunt voluptatum blanditiis impedit cum cumque voluptates, autem ullam totam, aspernatur obcaecati et.</p>
+            <h5>Herry Up! only 98 device left in stock</h5>
+            <button class="add_cart" (click)="addProduct(product)">Add to cart</button>
+            <div class="icons justify-content-lg-start justify-content-center">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-sliders"></i>
+                <i class="fas fa-share-nodes"></i>
+                <i class="fas fa-calendar"></i>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <app-slider
+    [showPhoto]="false"
+    [title]="'On Sale'"
+    [titleSpan]="'products'"
+    [slidesPerPage]="[2, 3, 4, 5]"
+    [filterByOldPrice]="true"
+    [saleCase]="true"
+    [sliderName]="'swiper1'"
+  ></app-slider>
+</div>
+<app-footer></app-footer>

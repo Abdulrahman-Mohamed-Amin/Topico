@@ -1,0 +1,57 @@
+<div class="bg-white p-3 nav">
+  <div class="container d-flex justify-content-between align-items-center">
+    <i class="fas fa-bars d-lg-none d-block fs-3 bar" (click)="open()"></i>
+    <div class="links flex-grow-1 d-lg-block d-none">
+      <ul class="list-unstyled d-flex gap-5">
+        <li class="text-uppercase fw-bold">
+          <a routerLink="/home" routerLinkActive="active">home</a>
+        </li>
+        <li class="text-uppercase fw-bold">
+          <a routerLink="/products" routerLinkActive="active">all products</a>
+        </li>
+        <li
+          routerLink="/home"
+          routerLinkActive=""
+          class="text-uppercase fw-bold"
+        >
+          <a href="">about us</a>
+        </li>
+        <li
+          routerLink="/home"
+          routerLinkActive=""
+          class="text-uppercase fw-bold"
+        >
+          <a href="">contact us</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="btns">
+      @if(singIn){
+      <button class="sign" routerLink="/sign-up">
+        Sign Up <i class="fa fa-user-plus"></i>
+      </button>
+
+      } @if (login) {
+      <button class="login" routerLink="/login">
+        Login <i class="fas fa-right-to-bracket"></i>
+      </button>
+
+      }
+    </div>
+  </div>
+</div>
+
+<div class="menu" [ngClass]="{ close_menu: check }">
+  <i class="fas fa-xmark icon_circle position-absolute" (click)="close()"></i>
+  <img src="../../../assets/img/logo-black.png" alt="" />
+
+  <ul class="list-unstyled text-uppercase fw-bold text-center">
+    <li routerLink="/home">home</li>
+    <li routerLink="/products">all products</li>
+    <li routerLink="/products">about us</li>
+    <li routerLink="/products">contact</li>
+  </ul>
+</div>
+
+<div class="lay" [ngClass]="{ close_lay: check }" (click)="close()"></div>

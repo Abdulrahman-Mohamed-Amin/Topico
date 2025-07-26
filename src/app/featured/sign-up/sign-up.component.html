@@ -1,0 +1,58 @@
+<app-header></app-header>
+<app-nav [singIn]="false"></app-nav>
+
+<div class="login container d-flex justify-content-center align-items-center">
+  <div class="bg-white shadow-sm cont">
+    <h2 class="text-center mb-3 fw-bold">welcome back</h2>
+
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="name"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Email"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Password"
+      />
+     
+    </div>
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Confirm Password"
+      />
+     
+    </div>
+      <button class="login_btn">sign up</button>
+      <div class="sign_in d-flex gap-2 mt-3">
+        <p>you already have an account?</p>
+        <a routerLink="/login" class="">login</a>
+      </div>
+      <div class="btns">
+        <button class="apple">
+          <i class="fab fa-apple"></i> sign up With apple
+        </button>
+        <button class="google">
+          <i class="fab fa-google"></i> sign up With google
+        </button>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
